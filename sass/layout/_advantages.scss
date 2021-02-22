@@ -5,44 +5,41 @@
 }
 
 .title-advant {
+  @include font(14px, 700, 1.14);
   margin-bottom: 10px;
   font-family: Roboto;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
   color: #212121;
   text-transform: uppercase;
+
+  &::before {
+    content: "";
+    display: block;
+    height: 120px;
+    background-color: #f5f4fa;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 
 .title-description {
+  @include font(14px, 400, 1.7);
   max-width: 270px;
   height: 75px;
-
-  font-weight: 400;
   font-style: normal;
-  font-size: 14px;
-  line-height: 1.7;
 }
 
-.section-title-li:not(:last-child) {
-  width: 270px;
-  margin-right: 30px;
+.section-title-li {
+  &:not(:last-child) {
+    width: 270px;
+    margin-right: 30px;
+  }
 }
 
 .section-title-list {
   display: flex;
   justify-content: space-between;
-}
-
-.title-advant::before {
-  content: "";
-  display: block;
-  height: 120px;
-  background-color: #f5f4fa;
-  margin-bottom: 30px;
-  border-radius: 4px;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .icon-antenna::before {

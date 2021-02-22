@@ -13,10 +13,10 @@
 .capabilities-flex-item {
   width: 370px;
   position: relative;
-}
 
-.capabilities-flex-item:not(:last-child) {
-  margin-right: 30px;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .box-thumb {

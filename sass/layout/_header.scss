@@ -1,10 +1,4 @@
 /*HEADER*/
-
-.page-header .container {
-  display: flex;
-  align-items: center;
-}
-
 .page-header {
   /*position: fixed; ДЕЛАЕТ ФИКСИРОВАН ХЭДЕР*/
   min-height: 80px;
@@ -31,33 +25,35 @@
 .contacts-item {
   display: flex;
   text-align: center;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
-.contacts-item:not(:last-child) {
-  margin-right: 30px;
-}
+.link {
+  .contacts & {
+    @include font(14px, 500, 1.14);
+    color: var(--primary-text-color);
+    letter-spacing: 0.02em;
+  }
 
-.contacts .link {
-  color: var(--primary-text-color);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    cursor: pointer;
+  }
 
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-}
+  .site-nav & {
+    @include font(14px, 400, 1.14);
+    color: var(--title-text-color);
+    letter-spacing: 0.02em;
 
-.footer-map:focus,
-.footer-map:hover,
-.footer-link:hover,
-.footer-link:focus,
-.link:hover,
-.link:focus,
-.mail-link:hover,
-.mail-link:focus,
-.link-tel:hover,
-.link-tel:focus {
-  color: var(--accent-color);
-  cursor: pointer;
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
 }
 
 .link-current {
@@ -65,23 +61,19 @@
   text-decoration: none;
   color: currentColor;
   position: relative;
-}
 
-.link-current::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 4px;
-  left: 0;
-  bottom: -1px;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    left: 0;
+    bottom: -1px;
 
-  background: #2196f3;
-  border-radius: 2px;
-}
-
-.contacts-item .mail-link {
-  margin-left: auto;
+    background: #2196f3;
+    border-radius: 2px;
+  }
 }
 
 .header-icon {
@@ -99,6 +91,16 @@
   cursor: pointer;
   justify-content: center;
   align-items: center;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    cursor: pointer;
+  }
+
+  .contacts-item & {
+    margin-left: auto;
+  }
 }
 
 .link-tel {
@@ -106,4 +108,10 @@
   height: 100%;
   cursor: pointer;
   align-items: center;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    cursor: pointer;
+  }
 }
