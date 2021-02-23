@@ -559,6 +559,10 @@ a {
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+.close:hover, .close:focus {
+  cursor: pointer;
+}
+
 .close-icon {
   width: 11px;
   height: 11px;
